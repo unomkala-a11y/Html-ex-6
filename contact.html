@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <!--Header Section -->
+    <header>
+        <h1>Contact Us</h1>
+        <p>Get in touch with us to schedule an appointment.</p>
+    </header>
+
+    <!-- Contact Form Section -->
+     <section class="contact-section">
+
+      <h2>Contact Form</h2>
+
+      <form id="contactForm">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name"
+               placeholder="Enter your full name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email"
+               placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone"
+               placeholder="Enter your phone number" required
+
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject" required>
+            <option value="">Select a subject</option>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Appointment">Appointment</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message"
+                  placeholder="Write your message here"
+                  rows="5" required></textarea>
+
+        <button type="submit">Submit Message</button>
+
+        <p id="formMessage"
+
+      </form>
+
+     </section>
+     
+     <!-- Schedule Table Section -->
+     <section class="schedule-section">
+
+         <h2>Appointment Schedule</h2>
+
+         <table>
+            <thead>
+                <tr>
+                     <th>Day</th>
+                     <th>Available Time</th>
+                     <th>Appointment Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                     <td>Monday</td>
+                     <td>09:00 - 10:00</td>
+                     <td>Available</td>
+                </tr>
+
+                <tr>
+                     <td>Thurday</td>
+                     <td>13:00 - 14:00</td>
+                     <td>Available</td>
+                </tr>
+
+                <tr>
+                     <td>Friday</td>
+                     <td>14:00 - 15:00</td>
+                     <td>Available</td>
+                </tr>
+            </tbody>
+         </table>
+
+     </section>
+
+     <footer>
+         <p>&copy; 2026 Contact Us. All rights reserved.</p>
+     </footer>
+
+     <script>
+         const form = document.getElementById("contactForm");
+         const message = document.getElementById("formMessage");
+
+         form.addEventListener("submit", funcntion(event) {
+             event.preventDefault(),
+
+             message,textContent =
+             "Thank you! Your message has been submitted.",
+
+             message,style,color = "green",
+
+             form,reset();
+         });
+     </script>
+
+</body>
+</html>
